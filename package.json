@@ -1,0 +1,46 @@
+{
+  "name": "@hypercolor/sqs-worker",
+  "author": "Andrew Aarestad",
+  "license": "MIT",
+  "version": "1.0.4",
+  "description": "Framework for defining and running async tasks with SQS",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "src/*.js",
+    "src/*.d.ts",
+    "LICENSE"
+  ],
+  "private": false,
+  "prepublish": "tsc --build --clean && tsc --build",
+  "scripts": {
+    "watch": "tsc --watch",
+    "build": "tsc --build --clean && tsc --build",
+    "build_publish": "npm run build && npm publish --access public"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "async",
+    "task",
+    "sqs",
+    "aws"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hypercolor/circleci-utils.git"
+  },
+  "devDependencies": {
+    "@types/md5": "^2.3.2",
+    "@types/node": "18",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1383.0",
+    "sqs-consumer": "^7.1.0",
+    "tsyringe": "^4.7.0",
+    "typedjson": "^1.8.0"
+  }
+}
